@@ -1,0 +1,48 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: myscript.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsf0045/Spring2026_CS481_HW4
+  The working directory is:  /scratch-local/ualclsf0045.hw4attempt1.36367.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202604140939.08
+  Job Name: hw4attempt1
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg001.asc.edu
+  Node list:  asaxg001.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu myscript.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N hw4attempt1 -a 202604140939.08 -r n -M cthirumalasetty@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Apr 14 09:39:34 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 PCIe               Off |   00000000:81:00.0 Off |                    0 |
+| N/A   69C    P0            273W /  310W |     500MiB /  81559MiB |     92%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA H100 PCIe               Off |   00000000:C1:00.0 Off |                    0 |
+| N/A   35C    P0             48W /  310W |       4MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
++-----------------------------------------------------------------------------------------+
+Time taken for size 5120 = 2.223321 seconds
+Time taken for size 5120 = 2.164104 seconds
+Time taken for size 5120 = 2.160050 seconds
